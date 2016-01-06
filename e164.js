@@ -646,7 +646,7 @@ lookup = function(phone) {
     for (c; c >= 0; c=c-1) {
       prefix = phone.substring(0, c);
       if (prefixes[prefix]) {
-        return { country: prefixes[prefix][1], code: prefixes[prefix][0] };
+        return { country: prefixes[prefix][1], code: prefixes[prefix][0], prefix: prefix };
       }
     }
   }
